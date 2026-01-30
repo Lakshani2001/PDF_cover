@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Free Assignment Cover Page Generator for Sri Lankan Students. Create professional cover pages in seconds.">
+    <title>CoverCraft | Student Assignment Cover Page Generator</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- jsPDF Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <!-- Docx Library -->
+    <script src="https://unpkg.com/docx@7.1.0/build/index.js"></script>
+</head>
+
+<body>
+    <div class="background-globes">
+        <div class="globe globe-1"></div>
+        <div class="globe globe-2"></div>
+        <div class="globe globe-3"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span>CoverCraft</span>
+        </div>
+        <div class="nav-links">
+            <a href="#features">Features</a>
+            <a href="#generator" class="btn-primary">Create Now</a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Create Perfect <span class="gradient-text">Assignment Cover Pages</span> in Seconds</h1>
+                <p>The ultimate tool for Sri Lankan university & school students. Professional, instant, and 100% free.
+                    No signup required.</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <i class="fa-solid fa-bolt"></i>
+                        <span>Instant PDF</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        <span>Pro Designs</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <span>Privacy First</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="features-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Experience <span class="gradient-text">Premium Features</span></h2>
+                    <p>Everything you need for a top-tier assignment submission.</p>
+                </div>
+
+                <div class="tabs-container glass-panel">
+                    <div class="tabs-header">
+                        <button class="tab-btn active" data-tab="instant">
+                            <i class="fa-solid fa-bolt"></i> Instant PDF
+                        </button>
+                        <button class="tab-btn" data-tab="pro">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i> Pro Designs
+                        </button>
+                        <button class="tab-btn" data-tab="privacy">
+                            <i class="fa-solid fa-shield-halved"></i> Privacy First
+                        </button>
+                    </div>
+
+                    <div class="tabs-content">
+                        <div class="tab-pane active" id="instant">
+                            <div class="tab-grid">
+                                <div class="tab-text">
+                                    <h3>Generate in Milliseconds</h3>
+                                    <p>No waiting queues, no loading screens. Our optimized engine converts your details
+                                        into a high-resolution PDF instantly right in your browser.</p>
+                                    <ul class="feature-list">
+                                        <li><i class="fa-solid fa-check"></i> Standard A4 Size</li>
+                                        <li><i class="fa-solid fa-check"></i> Print-Ready Format</li>
+                                        <li><i class="fa-solid fa-check"></i> Lightweight Files</li>
+                                    </ul>
+                                </div>
+                                <div class="tab-visual">
+                                    <i class="fa-regular fa-file-pdf"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane" id="pro">
+                            <div class="tab-grid">
+                                <div class="tab-text">
+                                    <h3>Academic Excellence</h3>
+                                    <p>Our templates are designed to meet the strict formatting guidelines of leading
+                                        Sri Lankan universities including UoC, UoM, and SLIIT.</p>
+                                    <ul class="feature-list">
+                                        <li><i class="fa-solid fa-check"></i> Professional Typography</li>
+                                        <li><i class="fa-solid fa-check"></i> Clean Layouts</li>
+                                        <li><i class="fa-solid fa-check"></i> Customizable Accents</li>
+                                    </ul>
+                                </div>
+                                <div class="tab-visual">
+                                    <i class="fa-solid fa-palette"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane" id="privacy">
+                            <div class="tab-grid">
+                                <div class="tab-text">
+                                    <h3>Your Data Stays With You</h3>
+                                    <p>We believe in absolute privacy. Unlike other tools, CoverCraft runs 100% on your
+                                        device. We never see, store, or share your student details.</p>
+                                    <ul class="feature-list">
+                                        <li><i class="fa-solid fa-check"></i> No Database</li>
+                                        <li><i class="fa-solid fa-check"></i> No Server Uploads</li>
+                                        <li><i class="fa-solid fa-check"></i> Works Offline</li>
+                                    </ul>
+                                </div>
+                                <div class="tab-visual">
+                                    <i class="fa-solid fa-user-shield"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="generator" class="generator-section">
+            <div class="container">
+                <div class="generator-grid">
+                    <!-- Form Side -->
+                    <div class="form-card glass-panel">
+                        <div class="card-header">
+                            <h2><i class="fa-regular fa-pen-to-square"></i> Enter Details</h2>
+                            <p>Fill in the information for your assignment.</p>
+                        </div>
+
+                        <form id="coverPageForm">
+                            <div class="form-group full-width">
+                                <label for="university">University / Institute Name</label>
+                                <input type="text" id="university" placeholder="e.g. University of Colombo, SLIIT, NSBM"
+                                    required>
+                                <div class="suggestions">Popular: UoC, UoM, SLIIT, NSBM, NIBM</div>
+                            </div>
+
+                            <!-- New Customization Section -->
+                            <div class="divider"><span>Cover Page Style</span></div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="themeColor">Theme Color</label>
+                                    <div class="color-input-wrapper">
+                                        <input type="color" id="themeColor" value="#000000">
+                                        <span class="color-label">Text/Border</span>
+                                    </div>
+                                </div>
+                                <div class="form-group full-width">
+                                    <label for="pageColor">Page Background</label>
+                                    <div class="color-input-wrapper">
+                                        <input type="color" id="pageColor" value="#ffffff">
+                                        <span class="color-label">Paper Color</span>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+
+                    <!-- Typography Controls (Heading Removed) -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fontFamily">Font Style</label>
+                            <select id="fontFamily">
+                                <option value="times">Times New Roman</option>
+                                <option value="helvetica">Arial / Helvetica</option>
+                                <option value="courier">Courier / Check</option>
+                                <option value="georgia">Georgia</option>
+                                <option value="verdana">Verdana</option>
+                                <option value="sinhala">Sinhala (Iskoola Pota)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="titleCase">Title Case</label>
+                            <select id="titleCase">
+                                <option value="uppercase">UPPERCASE</option>
+                                <option value="capitalize">Capitalize Each Word</option>
+                                <option value="lowercase">lowercase</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="titleSize">Title Font Size</label>
+                        <input type="range" id="titleSize" min="20" max="60" value="28" class="range-slider">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="logoUpload">University Logo (Optional)</label>
+                        <div class="file-upload-wrapper">
+                            <input type="file" id="logoUpload" accept="image/*">
+                            <div class="upload-btn">
+                                <i class="fa-solid fa-cloud-arrow-up"></i> Upload Logo
+                            </div>
+                            <span id="fileName">No file chosen</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="faculty">Faculty / Department</label>
+                        <input type="text" id="faculty" placeholder="e.g. Faculty of Computing">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="module">Module Name/Code</label>
+                            <input type="text" id="module" placeholder="e.g. SE1010 - Software Eng." required>
+                        </div>
+                        <div class="form-group">
+                            <label for="assignmentTitle">Assignment Title</label>
+                            <input type="text" id="assignmentTitle" placeholder="e.g. Lab Report 01" required>
+                        </div>
+                    </div>
+
+                    <div class="divider"><span>Student Details</span></div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="studentName">Student Name</label>
+                            <input type="text" id="studentName" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="studentId">Registration / Index No</label>
+                            <input type="text" id="studentId" placeholder="e.g. IT20245678" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="submissionDate">Date of Submission</label>
+                        <input type="date" id="submissionDate">
+                    </div>
+
+                    <div class="button-group">
+                        <button type="button" id="btnPdf" class="generate-btn btn-pdf">
+                            <i class="fa-solid fa-file-pdf"></i> Download PDF
+                        </button>
+                        <button type="button" id="btnDocx" class="generate-btn btn-docx">
+                            <i class="fa-solid fa-file-word"></i> Download Word
+                        </button>
+                    </div>
+                    </form>
+                </div>
+
+                <!-- Preview Side (Restored) -->
+                <div class="preview-card glass-panel">
+                    <div class="card-header">
+                        <h2><i class="fa-regular fa-eye"></i> Live Preview</h2>
+                        <p>Here's how your cover page will look.</p>
+                    </div>
+
+                    <div class="paper-preview-container">
+                        <div id="paperPreview" class="paper">
+                            <div class="preview-content">
+                                <div class="u-logo-placeholder" id="previewLogoContainer">
+                                    <i class="fa-solid fa-university"></i>
+                                </div>
+                                <h3 id="prevUniversity">University Name</h3>
+                                <h4 id="prevFaculty">Faculty Name</h4>
+
+                                <div class="center-content">
+                                    <h1 id="prevAssignment">Assignment Title</h1>
+                                    <h2 id="prevModule">Module Code</h2>
+                                </div>
+
+                                <div class="bottom-details">
+                                    <div class="detail-row">
+                                        <span class="label">Name:</span>
+                                        <span class="value" id="prevName">Student Name</span>
+                                    </div>
+                                    <div class="detail-row">
+                                        <span class="label">Index No:</span>
+                                        <span class="value" id="prevId">Index Number</span>
+                                    </div>
+                                    <div class="detail-row">
+                                        <span class="label">Date:</span>
+                                        <span class="value" id="prevDate">YYYY-MM-DD</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>&copy; 2026 CoverCraft. Designed for Sri Lankan Students.</p>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
